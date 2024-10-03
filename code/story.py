@@ -1,6 +1,7 @@
-Game is based on Operation Linebacker II, a strategic bombing campaign conducted by United States during the Vietnam War.
+import textwrap
 
-Your country are in a war with another country. You are a combat pilot, and you always want to destroy the enemy's infrastructure as much as you can. One day, you have an ultimate mission: destroy enemy's main airports.
+story = '''Your country are in a war with another country. 
+You are a combat pilot, and you always want to destroy the enemy's infrastructure as much as you can. One day, you have an ultimate mission: destroy enemy's main airports.
 
 You set off on your journey, from your base's airport. You will be provided an amount of aviation gasoline. Be careful with them, because you will absolutely be killed by your enemy if you run out of fuel while completing your mission.
 
@@ -33,3 +34,11 @@ When you come back your base, you will win the game. Your country will soon win 
 If you die while arriving back at your base, you still cannot win the game. Your country still soon win the war. You still become the hero of your country, but you cannot enjoy your succeed because now you are a great martyrs.
 
 If you cannot destroy the enemy's base and be killed, you will lose and become a martyr. However, only a little people remember you and you will soon be forgotten.
+'''
+
+wrapper = textwrap.TextWrapper(width = 140, break_long_words = False, replace_whitespace = False)
+
+word_list = wrapper.wrap(text = story)
+
+def get_story():
+    return word_list
